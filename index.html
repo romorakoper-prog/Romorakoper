@@ -1,119 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080808">
-  <meta name="description" content="ROMORA KOPER — koleksi koper elegan untuk menemani perjalanan Anda.">
-  <title>ROMORA KOPER | Luxury Travel Collection</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="ROMORA KOPER — temukan koper untuk menemani setiap perjalanan.">
+  <title>ROMORA KOPER | Temani Setiap Perjalanan</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="announcement">ELEGANCE IN EVERY JOURNEY <span>✦</span> TEMUKAN KOLEKSI ROMORA</div>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="Romora Koper beranda">
-      <span class="brand-name">ROMORA</span><span class="brand-sub">K O P E R</span>
-    </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
-    <nav id="mainNav">
-      <a href="#home">Beranda</a><a href="#koleksi">Koleksi</a><a href="#tentang">Tentang Romora</a>
-      <a class="nav-cta" href="#kontak">Hubungi Kami</a>
-      <button class="cart-trigger" id="cartTrigger" aria-label="Buka keranjang">♧ <span>Keranjang</span> <b id="cartCount">0</b></button>
-    </nav>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#beranda" aria-label="ROMORA KOPER">ROMORA <span>KOPER</span></a>
+      <nav class="navlinks" aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a><a href="#katalog">Katalog</a><a href="#tentang">Tentang Kami</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn" type="button" onclick="openCart()">Keranjang <span class="cart-count" id="cartCount">0</span></button>
+        <button class="btn gold" type="button" onclick="orderViaWhatsApp()">Pesanan</button>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <img class="hero-image" src="romora cover.jpg" alt="Koleksi koper Romora dalam suasana hitam dan gold" fetchpriority="high">
-      <div class="hero-shade"></div>
+    <section class="wrap hero" id="beranda">
       <div class="hero-copy">
-        <p class="eyebrow"><span></span> THE ART OF TRAVEL <span></span></p>
-        <h1>Teman Perjalanan<br><em>Anda.</em></h1>
-        <p class="hero-text">Gaya premium. Detail berkelas. Siap menemani setiap perjalanan Anda.</p>
-        <a class="gold-button" href="#koleksi">JELAJAHI KOLEKSI <span>↗</span></a>
+        <div class="eyebrow">ROMORA KOPER · TEMANI PERJALANAN</div>
+        <h1>Perjalanan baru,<br><em>cerita baru.</em></h1>
+        <p>Temukan koper yang sesuai dengan kebutuhanmu. Desain praktis untuk menemani perjalanan, liburan, maupun aktivitas sehari-hari.</p>
+        <div class="nav-actions" style="margin-top:24px">
+          <a class="btn gold" href="#katalog">Lihat Katalog ↘</a>
+          <button class="btn" onclick="orderViaWhatsApp()">Hubungi Kami</button>
+        </div>
       </div>
-      <div class="hero-note"><span>01</span><i></i> ROMORA TRAVEL COLLECTION</div>
-    </section>
-
-    <section class="intro section-wrap" id="tentang">
-      <p class="eyebrow gold-text">DIBUAT UNTUK PERJALANAN ANDA</p>
-      <h2>Elegan dalam tampilan.<br><em>Berarti dalam perjalanan.</em></h2>
-      <p class="intro-body">Temukan pilihan koper dengan karakter dan warna yang beragam untuk menemani perjalanan bisnis, liburan, maupun momen istimewa Anda.</p>
-      <div class="gold-rule"></div>
-    </section>
-
-    <section class="catalog section-wrap" id="koleksi">
-      <div class="section-heading">
-        <div><p class="eyebrow gold-text">PILIHAN ROMORA</p><h2>Koleksi <em>Koper</em></h2></div>
-        <p>Temukan gaya yang paling sesuai<br>untuk perjalanan Anda.</p>
-      </div>
-      <div class="product-grid">
-        <article class="product-card">
-          <button class="product-image" data-image="romora-1.jpg" data-name="Romora Burgundy Quilted" aria-label="Perbesar Romora Burgundy Quilted"><img src="romora-1.jpg" alt="Koper Romora burgundy dengan motif quilted" loading="lazy"><span class="view-label">LIHAT DETAIL ↗</span></button>
-          <div class="product-info"><span class="product-number">01 / SIGNATURE</span><h3>Burgundy Quilted</h3><p>Warna burgundy dengan motif elegan.</p><a class="text-link order-link" data-product="Burgundy Quilted" href="#kontak">TANYAKAN PRODUK <span>↗</span></a>
-            <div class="product-actions"><button class="add-cart" data-product="Burgundy Quilted">+ KERANJANG</button><button class="buy-now" data-product="Burgundy Quilted">BELI</button></div></div>
-        </article>
-        <article class="product-card">
-          <button class="product-image" data-image="romora-2.jpg" data-name="Romora White Gold" aria-label="Perbesar Romora White Gold"><img src="romora-2.jpg" alt="Koper Romora putih dengan aksen hitam dan gold" loading="lazy"><span class="view-label">LIHAT DETAIL ↗</span></button>
-          <div class="product-info"><span class="product-number">02 / CLASSIC</span><h3>White Gold</h3><p>Tampilan putih bersih dengan detail kontras.</p><a class="text-link order-link" data-product="White Gold" href="#kontak">TANYAKAN PRODUK <span>↗</span></a>
-            <div class="product-actions"><button class="add-cart" data-product="White Gold">+ KERANJANG</button><button class="buy-now" data-product="White Gold">BELI</button></div></div>
-        </article>
-        <article class="product-card">
-          <button class="product-image" data-image="romora-3.jpg" data-name="Romora Burgundy Texture" aria-label="Perbesar Romora Burgundy Texture"><img src="romora-3.jpg" alt="Koper Romora burgundy bertekstur" loading="lazy"><span class="view-label">LIHAT DETAIL ↗</span></button>
-          <div class="product-info"><span class="product-number">03 / TEXTURE</span><h3>Burgundy Texture</h3><p>Tekstur khas dengan karakter yang kuat.</p><a class="text-link order-link" data-product="Burgundy Texture" href="#kontak">TANYAKAN PRODUK <span>↗</span></a>
-            <div class="product-actions"><button class="add-cart" data-product="Burgundy Texture">+ KERANJANG</button><button class="buy-now" data-product="Burgundy Texture">BELI</button></div></div>
-        </article>
-        <article class="product-card">
-          <button class="product-image" data-image="romora-4.jpg" data-name="Romora Burgundy Line" aria-label="Perbesar Romora Burgundy Line"><img src="romora-4.jpg" alt="Koper Romora burgundy dengan garis vertikal" loading="lazy"><span class="view-label">LIHAT DETAIL ↗</span></button>
-          <div class="product-info"><span class="product-number">04 / MODERN</span><h3>Burgundy Line</h3><p>Garis tegas untuk gaya modern.</p><a class="text-link order-link" data-product="Burgundy Line" href="#kontak">TANYAKAN PRODUK <span>↗</span></a>
-            <div class="product-actions"><button class="add-cart" data-product="Burgundy Line">+ KERANJANG</button><button class="buy-now" data-product="Burgundy Line">BELI</button></div></div>
-        </article>
-        <article class="product-card">
-          <button class="product-image" data-image="romora-5.jpg" data-name="Romora Ivory Gold" aria-label="Perbesar Romora Ivory Gold"><img src="romora-5.jpg" alt="Koper Romora warna ivory dengan aksen gold" loading="lazy"><span class="view-label">LIHAT DETAIL ↗</span></button>
-          <div class="product-info"><span class="product-number">05 / IVORY</span><h3>Ivory Gold</h3><p>Nuansa ivory yang lembut dan berkelas.</p><a class="text-link order-link" data-product="Ivory Gold" href="#kontak">TANYAKAN PRODUK <span>↗</span></a>
-            <div class="product-actions"><button class="add-cart" data-product="Ivory Gold">+ KERANJANG</button><button class="buy-now" data-product="Ivory Gold">BELI</button></div></div>
-        </article>
-        <article class="product-card">
-          <button class="product-image" data-image="romora-6.jpg" data-name="Romora Ruby Tan" aria-label="Perbesar Romora Ruby Tan"><img src="romora-6.jpg" alt="Koper Romora merah dengan aksen warna tan" loading="lazy"><span class="view-label">LIHAT DETAIL ↗</span></button>
-          <div class="product-info"><span class="product-number">06 / RUBY</span><h3>Ruby Tan</h3><p>Perpaduan merah dan aksen tan yang menonjol.</p><a class="text-link order-link" data-product="Ruby Tan" href="#kontak">TANYAKAN PRODUK <span>↗</span></a>
-            <div class="product-actions"><button class="add-cart" data-product="Ruby Tan">+ KERANJANG</button><button class="buy-now" data-product="Ruby Tan">BELI</button></div></div>
-        </article>
-        <article class="product-card">
-          <button class="product-image" data-image="romora-7.jpg" data-name="Romora Amber Geometry" aria-label="Perbesar Romora Amber Geometry"><img src="romora-7.jpg" alt="Koper Romora amber dengan pola geometris" loading="lazy"><span class="view-label">LIHAT DETAIL ↗</span></button>
-          <div class="product-info"><span class="product-number">07 / GEOMETRIC</span><h3>Amber Geometry</h3><p>Pola geometris dengan warna amber yang hangat.</p><a class="text-link order-link" data-product="Amber Geometry" href="#kontak">TANYAKAN PRODUK <span>↗</span></a>
-            <div class="product-actions"><button class="add-cart" data-product="Amber Geometry">+ KERANJANG</button><button class="buy-now" data-product="Amber Geometry">BELI</button></div></div>
-        </article>
+      <div class="hero-art" role="img" aria-label="Area visual utama ROMORA KOPER">
+        <div class="hero-note">RUANG UNTUK PERJALANANMU</div>
       </div>
     </section>
 
-    <section class="brand-banner">
-      <div class="banner-inner"><p class="eyebrow">YOUR JOURNEY, YOUR STYLE</p><h2>Setiap perjalanan punya<br><em>ceritanya sendiri.</em></h2><a class="gold-button" href="#kontak">MULAI BERSAMA ROMORA <span>↗</span></a></div>
+    <section class="section" id="katalog">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">PILIHAN KAMU</div><h2>Katalog Koper</h2><p>Pilih produk dan tanyakan ketersediaannya melalui WhatsApp.</p></div>
+          <div class="scroll-actions"><button class="round-btn" aria-label="Geser katalog ke kiri" onclick="scrollCatalog(-1)">‹</button><button class="round-btn" aria-label="Geser katalog ke kanan" onclick="scrollCatalog(1)">›</button></div>
+        </div>
+        <div class="catalog" id="catalog">
+          <article class="product"><div class="product-art"><img src="assets/koper-1.jpg" alt="Koper ROMORA 01" loading="lazy"></div><div class="product-info"><h3>Koper ROMORA 01</h3><p>Koper warna merah marun dengan detail pola diagonal.</p><div class="product-actions"><button class="btn buy" onclick="buyNow(1)">Beli</button><button class="btn" onclick="addToCart(1)">+ Keranjang</button></div></div></article>
+          <article class="product"><div class="product-art"><img src="assets/koper-2.jpg" alt="Koper ROMORA 02" loading="lazy"></div><div class="product-info"><h3>Koper ROMORA 02</h3><p>Koper putih dengan aksen hitam dan detail keemasan.</p><div class="product-actions"><button class="btn buy" onclick="buyNow(2)">Beli</button><button class="btn" onclick="addToCart(2)">+ Keranjang</button></div></div></article>
+          <article class="product"><div class="product-art"><img src="assets/koper-3.jpg" alt="Koper ROMORA 03" loading="lazy"></div><div class="product-info"><h3>Koper ROMORA 03</h3><p>Koper marun dengan tekstur permukaan berbutir.</p><div class="product-actions"><button class="btn buy" onclick="buyNow(3)">Beli</button><button class="btn" onclick="addToCart(3)">+ Keranjang</button></div></div></article>
+          <article class="product"><div class="product-art"><img src="assets/koper-4.jpg" alt="Koper ROMORA 04" loading="lazy"></div><div class="product-info"><h3>Koper ROMORA 04</h3><p>Koper marun dengan detail garis vertikal.</p><div class="product-actions"><button class="btn buy" onclick="buyNow(4)">Beli</button><button class="btn" onclick="addToCart(4)">+ Keranjang</button></div></div></article>
+          <article class="product"><div class="product-art"><img src="assets/koper-5.jpg" alt="Koper ROMORA 05" loading="lazy"></div><div class="product-info"><h3>Koper ROMORA 05</h3><p>Koper putih dengan desain garis vertikal dan aksen keemasan.</p><div class="product-actions"><button class="btn buy" onclick="buyNow(5)">Beli</button><button class="btn" onclick="addToCart(5)">+ Keranjang</button></div></div></article>
+          <article class="product"><div class="product-art"><img src="assets/koper-6.jpg" alt="Koper ROMORA 06" loading="lazy"></div><div class="product-info"><h3>Koper ROMORA 06</h3><p>Koper merah dengan aksen warna keemasan.</p><div class="product-actions"><button class="btn buy" onclick="buyNow(6)">Beli</button><button class="btn" onclick="addToCart(6)">+ Keranjang</button></div></div></article>
+          <article class="product"><div class="product-art"><img src="assets/koper-7.jpg" alt="Koper ROMORA 07" loading="lazy"></div><div class="product-info"><h3>Koper ROMORA 07</h3><p>Koper warna emas dengan pola geometris.</p><div class="product-actions"><button class="btn buy" onclick="buyNow(7)">Beli</button><button class="btn" onclick="addToCart(7)">+ Keranjang</button></div></div></article>
+        </div>
+      </div>
     </section>
 
-    <section class="contact section-wrap" id="kontak">
-      <div><p class="eyebrow gold-text">BANTUAN & PEMESANAN</p><h2>Perjalanan Anda<br><em>dimulai di sini.</em></h2><p class="contact-text">Hubungi tim Romora untuk menanyakan ketersediaan model, pilihan warna, dan informasi pemesanan.</p></div>
-      <div class="contact-card"><span class="contact-icon">✦</span><p class="contact-label">WHATSAPP ROMORA</p><h3>0821-2385-102</h3><p>Respons langsung untuk pertanyaan produk.</p><a class="gold-button whatsapp-button" href="https://wa.me/628212385102?text=Halo%20Romora%2C%20saya%20ingin%20bertanya%20tentang%20produk%20koper." target="_blank" rel="noopener">CHAT VIA WHATSAPP <span>↗</span></a><small>Jika nomor belum terhubung, periksa kembali nomor WhatsApp bisnis Anda.</small></div>
+    <section class="section" id="tentang">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">KENALI ROMORA</div><h2>Temani Setiap Langkah</h2><p>Pengalaman belanja yang mudah, langsung terhubung dengan toko.</p></div></div>
+        <div class="benefits">
+          <div class="benefit"><div class="benefit-icon">✦</div><h3>Pilihan sesuai kebutuhan</h3><p>Jelajahi katalog dan pilih koper yang kamu inginkan.</p></div>
+          <div class="benefit"><div class="benefit-icon">◎</div><h3>Pesan dengan mudah</h3><p>Tanyakan detail produk dan ketersediaan langsung kepada kami.</p></div>
+          <div class="benefit"><div class="benefit-icon">↗</div><h3>Terhubung lewat WhatsApp</h3><p>Pesanan dikirim sebagai pesan WhatsApp agar mudah dikonfirmasi.</p></div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer><a class="brand footer-brand" href="#home"><span class="brand-name">ROMORA</span><span class="brand-sub">K O P E R</span></a><p>Elegance in every journey.</p><span class="copyright">© <span id="year"></span> ROMORA KOPER. ALL RIGHTS RESERVED.</span></footer>
+  <footer><div class="wrap footer-row"><span>© <span id="year"></span> ROMORA KOPER</span><span>Temani setiap perjalanan.</span></div></footer>
 
-  <a class="floating-wa" href="https://wa.me/628212385102?text=Halo%20Romora%2C%20saya%20ingin%20bertanya%20tentang%20produk%20koper." target="_blank" rel="noopener" aria-label="Chat WhatsApp Romora">✆</a>
-
-  <div class="cart-overlay" id="cartOverlay"></div>
-  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Keranjang belanja">
-    <div class="cart-head"><div><p class="eyebrow gold-text">ROMORA CHECKOUT</p><h2>Keranjang <em>Anda</em></h2></div><button id="cartClose" class="cart-close" aria-label="Tutup keranjang">×</button></div>
-    <div id="cartItems" class="cart-items"><p class="cart-empty">Keranjang Anda masih kosong.</p></div>
-    <div class="cart-bottom"><p class="cart-note">Harga dan ketersediaan akan dikonfirmasi melalui WhatsApp.</p><button id="checkoutButton" class="gold-button checkout-button">LANJUTKAN PEMESANAN <span>↗</span></button></div>
-  </aside>
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Tutup gambar">×</button>
-    <img id="lightboxImage" src="" alt="">
-    <p id="lightboxCaption"></p>
+  <button class="whatsapp-float" onclick="orderViaWhatsApp()" aria-label="Hubungi ROMORA KOPER melalui WhatsApp" title="WhatsApp">◉</button>
+  <div class="modal-backdrop" id="cartModal" onclick="if(event.target===this)closeCart()">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="modal-head"><h2 id="cartTitle">Keranjang Kamu</h2><button class="icon-btn" onclick="closeCart()" aria-label="Tutup keranjang">×</button></div>
+      <div id="cartItems"></div>
+      <div class="modal-foot"><span id="cartTotal">—</span><button class="btn gold" onclick="checkoutCart()">Pesan via WhatsApp</button></div>
+    </section>
   </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="script.js"></script>
 </body>
 </html>
